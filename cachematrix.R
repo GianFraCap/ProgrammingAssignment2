@@ -31,7 +31,7 @@ makeCacheMatrix <- function(matr = matrix()) {
 ## been computed. If this is the case it returns the cached data.
 ## If not, it uses the input matrix of makeCacheMatrix (via x$get()) to compute the inverse.
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x) {
         inv_matr <- x$get_inverse()
         if(!is.null(inv_matr)) {
                 message("getting cached data for inverse matrix")	
